@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="jp"
+    xmlns:th="http://www.thymeleaf.org">
+<head th:include="common/default :: common_head">
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <div class="wrapper">
+        <form class="form-signin" method="post" autocomplete="off">
+          <h2 class="form-signin-heading">Login Spring Sample</h2>
+          <input type="text" class="form-control" name="userId" placeholder="User ID" required="" autofocus="" />
+          <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+          <br/>
+          <ul>
+              <li>ID : user01</li>
+              <li>Password : password</li>              
+          </ul>
+          <div th:if="${msg != null}">
+		    <font color="red"><p th:text="${msg}"></p></font>
+		  </div>
+        </form>
+      </div>
+</body>
+</html>

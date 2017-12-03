@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="jp" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="common/default :: common_head">
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <div class="containar">
+        <div class="media">
+            <img class="align-self-start rounded-circle mr-3" th:src="@{/images/sample.png}" alt="sample image" />
+            <div class="media-body">
+                <h5 class="mt-0" th:text="${usr.name}"></h5>
+                こちらはSpring Bootのサンプルアプリです。勉強用なのでセキュリティ等は考慮せずに実装してます。
+            </div>
+        </div>
+        <hr/>
+        <footer th:include="common/default :: common_footer">
+        </footer>
+    </div>
+</body>
+
+</html>
